@@ -20,3 +20,4 @@ Unit tests are test which verifies individul function output with desired output
 2. Create another python file to write function to test Flask APIs
    ![image.png](assets/flask_app_test.png)
 3. Run `pytest` from terminal to check test result summary![image.png](assets/flask_pytest.png)
+4. Test case for POST requests![image.png](assets/flask_app_POST_test.png)![flask_app_POST_pytest.png](assets/flask_app_POST_pytest.png?t=1733052785775)
