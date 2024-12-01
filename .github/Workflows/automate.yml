@@ -1,0 +1,22 @@
+name: Run Python Tests          # Give any name
+on:                             # Whenever someone
+  push:                         # tries to push code
+    branches:                   # on the branch
+      - main                    # main, execute following sequence of commands
+
+jobs:
+  build:
+    runs-on: ubuntu-latest      # Build the code on ubuntu machine
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install Python 3
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.13
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+          pip install -r requirements.txt
+      - name: Run tests with pytest
+        run: pytest
